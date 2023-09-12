@@ -21,6 +21,9 @@ class Vehicle {
     toString() {
         return `The vehicle is a ${this.make} ${this.model} from ${this.year}`; //need to make sure youre using back ticks for template literals
       } 
+      get isVehicle() {//this is a way to ensure that whatever is passed through is indeed a vehicle, and that a vehicle exists, we reference this later in the Garage class to ensure only vehicles are being passed
+        return true;
+      }
 }
 
 class Car extends Vehicle {
